@@ -132,7 +132,7 @@ CALENDAR_FACTS = (
         [
             'causes huge headaches for software developers.',
             'is taken advantage of by high-speed traders.',
-            'triggered the 2003 Northeast Blackout',
+            'triggered the 2003 Northeast Blackout.',
             'has to be corrected for by GPS satellites.',
             'is now recognized as a major cause of World War I.'
         ]
