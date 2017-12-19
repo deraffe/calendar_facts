@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import random
 
 rnd = random.SystemRandom()
@@ -32,12 +31,17 @@ CALENDAR_FACTS = (
         ]
 )
 
+
 def generate(tree):
     for part in tree:
         if isinstance(part, tuple):
             yield from generate(part)
         elif isinstance(part, list):
-            yield choice(part)
+            c = choice(part)
+            if isinstance(c, str):
+                yield c
+            else:
+                yield from generate(c)
         elif isinstance(part, str):
             yield part
 
@@ -50,8 +54,9 @@ def main():
     from argparse import ArgumentParser
     parser = ArgumentParser()
     args = parser.parse_args()
-    print(' '.join(generate(CALENDAR_FACTS)))
+    fact = list(generate(CALENDAR_FACTS))
+    print(' '.join(fact))
+
 
 if __name__ == '__main__':
     main()
-
