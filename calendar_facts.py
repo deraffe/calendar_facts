@@ -93,7 +93,7 @@ CALENDAR_FACTS = (
                     )
                 ]
             ),
-            'magnetic field reversal',
+            'magnetic field reversal?',
             (
                 'an arbitrary decision by',
                 [
